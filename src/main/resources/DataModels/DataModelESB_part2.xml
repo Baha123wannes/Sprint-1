@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="LTE Monitoring" category="LTE communication profile" classVersion="1" classId="151" logicalName="0;1;25;11;0;255">
+        <description>LTE Monitoring</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0001190B00FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="LTE_network_parameters" id="2">
+            <description>LTE_network_parameters</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="true" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="LTE_network_parameters">
+                <dlmsType type="LONG_UNSIGNED" name=" T3402" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="T3412" edition="NUMBER"/>
+                <dlmsType type="DOUBLE_LONG_UNSIGNED" name="T3412ext2" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="T3324" edition="NUMBER"/>
+                <dlmsType type="DOUBLE_LONG_UNSIGNED" name="TeDRX" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="TPTW" edition="NUMBER"/>
+                <dlmsType type="INTEGER" name="qRxlevMin" edition="NUMBER"/>
+                <dlmsType type="INTEGER" name="qRxlevMinCE-r13" edition="NUMBER"/>
+                <dlmsType type="INTEGER" name="qRxlevMinCE1-r13" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="LTE_Quality_of_service" id="3">
+            <description>LTE_Quality_of_service</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="true" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="LTE_Quality_of_service">
+                <dlmsType type="INTEGER" name="(N)RSRQ" edition="NUMBER"/>
+                <dlmsType type="INTEGER" name="(N)RSRP" edition="NUMBER"/>
+                <dlmsType type="INTEGER" name="SNR" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="Coverage_Enhancement" edition="NUMBER">
+                    <parameter code="0" description="Mode A in case of LTE Cat M1, CE Level 0 in case of LTE Cat NB1/NB2" bitmask="0x00000000"/>
+                    <parameter code="1" description="Mode B in case of LTE Cat M1, CE Level 1 in case of LTE Cat NB1/NB2" bitmask="0x00000001"/>
+                    <parameter code="2" description="CE Level 2 in case of LTE Cat NB1/NB2" bitmask="0x00000010"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="GSM diagnostic" category="Remote communication - GSM/GPRS Setup Objects" classVersion="0" classId="47" logicalName="0;0;25;6;0;255">
+        <description>GSM diagnostic</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="true" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0000190600FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="operator" id="2">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="operator  " edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="status" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="status" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="cs_attachement" id="4">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="false" name="cs_attachement" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="ps_status" id="5">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="ps_status" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="cell_info" id="6">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="cell_info">
+                <dlmsType type="DOUBLE_LONG_UNSIGNED" name="cell_ID" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="location_ID" edition="NUMBER"/>
+                <dlmsType type="UNSIGNED" name="signal_strength" edition="NUMBER"/>
+                <dlmsType type="UNSIGNED" name="ber" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="mcc" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="mnc" edition="NUMBER"/>
+                <dlmsType type="DOUBLE_LONG_UNSIGNED" name="channel_number" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="adjacent_cells" id="7">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="adjacent_cells">
+                <dlmsType type="STRUCTURE" name="adjacent_cells">
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="cell_ID" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" name="location_ID" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Maximum Demand Register 1 - Active energy import (+A)" category="Electricity related objects - Demand" classVersion="0" classId="4" logicalName="1;0;1;6;0;255">
+        <description>Maximum Demand Register 1 - Active energy import (+A)</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100040400FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="scaler_unit" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="INTEGER" editable="true" name="scaler" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="unit" defaultValue="27" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="status" id="4">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="capture_time" id="5">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="value" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsMethod name="reset" id="1">
+            <description>reset</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="reset" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+</datamodel>

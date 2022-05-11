@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Start time of last total power failure" category="Abstract objects - Errors  Alarms, Event logs" classVersion="0" classId="1" logicalName="0;0;96;7;10;255">
+        <description>Start time of last total power failure</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="000060070AFF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" edition="STRING"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Event Object - Power Quality Log" category="Abstract objects - Errors  Alarms, Event logs" classVersion="0" classId="1" logicalName="0;0;96;11;4;255">
+        <description>Event Object - Power Quality Log</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0000600B04FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Instantaneous reactive import power L3 " category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;63;7;0;255">
+        <description>Instantaneous reactive import power L3</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="01003F0700FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

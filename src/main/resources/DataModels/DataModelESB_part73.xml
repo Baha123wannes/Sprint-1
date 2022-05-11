@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Reactive energy (+R) rate 8" category="Electricity related objects - Rated registers" classVersion="0" classId="3" logicalName="1;0;3;8;8;255">
+        <description>Reactive energy (+R) rate 8</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100030802FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Device ID 4" category="Device ID 4" classVersion="0" classId="1" logicalName="0;0;96;1;3;255">
+        <description>Device ID 4</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="value" edition="STRING"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Quality of Supply profile" category="Electricity related objects - Profiles" classVersion="0" classId="7" logicalName="1;0;99;14;0;255">
+        <description>Quality of Supply profile</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100630100FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="buffer" id="2">
+            <description>buffer</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="buffer">
+                <dlmsType type="STRUCTURE" name="entry">
+                    <dlmsType type="OCTET_STRING" name="time" edition="STRING"/>
+                    <dlmsType type="UNSIGNED" name="status" edition="NUMBER"/>
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="value" edition="NUMBER"/>
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="value" edition="NUMBER"/>
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="value" edition="NUMBER"/>
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="value" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="capture_objects" id="3">
+            <description>capture_objects</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="capture_objects">
+                <dlmsType type="STRUCTURE" name="capture_object_definition">
+                    <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" name="logical_name" edition="STRING"/>
+                    <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                    <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="capture_period" id="4">
+            <description>capture_period</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="capture_period" defaultValue="1800" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="sort_method" id="5">
+            <description>sort_method</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="sort_method" edition="NUMBER">
+                <parameter code="1" description="fifo" bitmask="0x00000000"/>
+                <parameter code="2" description="lifo" bitmask="0x00000001"/>
+                <parameter code="3" description="largest" bitmask="0x00000010"/>
+                <parameter code="4" description="smallest" bitmask="0x00000100"/>
+                <parameter code="5" description="nearest_to_zero" bitmask="0x00001000"/>
+                <parameter code="6" description="farest_from_zero" bitmask="0x00010000"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="sort_object" id="6">
+            <description>sort_object</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="sort_object">
+                <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                <dlmsType type="OCTET_STRING" name="logical_name" edition="STRING"/>
+                <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="entries_in_use" id="7">
+            <description>entries_in_use</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="entries_in_use" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="profile_entries" id="8">
+            <description>profile_entries</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="profile_entries" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsMethod name="reset" id="1">
+            <description>reset</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="reset" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+</datamodel>

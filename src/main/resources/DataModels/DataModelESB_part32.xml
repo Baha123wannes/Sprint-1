@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Instantaneous current  L3" category="Electricity related objects - Rated registers" classVersion="0" classId="3" logicalName="1;0;71;7;0;255">
+        <description>Instantaneous current  L3</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100470700FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Instantaneous current  L2" category="Electricity related objects - Rated registers" classVersion="0" classId="3" logicalName="1;0;51;7;0;255">
+        <description>Instantaneous current  L2</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100330700FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Instantaneous current  L1" category="Electricity related objects - Rated registers" classVersion="0" classId="3" logicalName="1;0;31;7;0;255">
+        <description>Instantaneous current  L1</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="01001F0700FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Instantaneous reactive export power L3" category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;64;7;0;255">
+        <description>Instantaneous reactive export power L3</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100400700FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Active energy export (−A) rate 4" category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;2;8;4;255">
+        <description>Active energy export (−A) rate 4</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100201800FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="scaler_unit" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="INTEGER" editable="true" name="scaler" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="unit" defaultValue="29" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Active energy export (−A) rate 3" category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;2;8;3;255">
+        <description>Active energy export (−A) rate 3</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100201800FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="scaler_unit" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="INTEGER" editable="true" name="scaler" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="unit" defaultValue="29" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

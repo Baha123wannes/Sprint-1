@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Max Current L2" category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;51;26;0;255">
+        <description>Max Current L2</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100331A00FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="scaler_unit" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="INTEGER" editable="true" name="scaler" defaultValue="-1" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="unit" defaultValue="33" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="reset" id="1">
+            <description>reset</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="reset" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+    <cosemObject name="Max Current L1" category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;31;26;0;255">
+        <description>Max Current L1</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="01001F1A00FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="scaler_unit" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="INTEGER" editable="true" name="scaler" defaultValue="-1" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="unit" defaultValue="33" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="reset" id="1">
+            <description>reset</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="reset" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+    <cosemObject name="Disconnect control" category="Abstract objects - Disconnector, Load mgmt, Supervision" classVersion="0" classId="70" logicalName="0;0;96;3;10;255">
+        <description>Disconnect control</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="000060030AFF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="output_state" id="2">
+            <description>output_state</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="BOOL" editable="true" name="output_state" defaultValue="true" edition="BOOLEAN"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="control_state" id="3">
+            <description>control_state</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="control_state" edition="NUMBER">
+                <parameter code="0" description="Diconnected" bitmask="0x00000000"/>
+                <parameter code="1" description="Connected" bitmask="0x00000001"/>
+                <parameter code="2" description="Ready_for_reconnection" bitmask="0x00000010"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="control_mode" id="4">
+            <description>control_mode</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="control_mode" edition="NUMBER">
+                <parameter code="3" description="mode3" bitmask="0x00000100"/>
+                <parameter code="0" description="mode0" bitmask="0x00000000"/>
+                <parameter code="4" description="mode4" bitmask="0x00001000"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="remote_disconnect" id="1">
+            <description>remote_disconnect</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="remote_disconnect" edition="NUMBER"/>
+        </dlmsMethod>
+        <dlmsMethod name="remote_connect" id="2">
+            <description>remote_connect</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="remote_connect" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+</datamodel>

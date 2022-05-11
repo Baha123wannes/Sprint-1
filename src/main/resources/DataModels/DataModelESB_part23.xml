@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Power failure/resume notification configuration" category="ESO objects" classVersion="0" classId="1" logicalName="0;0;96;52;2;255">
+        <description>Power failure/resume notification configuration</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" name="logical_name" defaultValue="0000603402FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="LONG_UNSIGNED" name="T1" defaultValue="30" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="T2" defaultValue="60" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Partial power failure/resume notification configuration" category="ESO objects" classVersion="0" classId="1" logicalName="0;0;96;52;3;255">
+        <description>Partial power failure/resume notification configuration</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" name="logical_name" defaultValue="0000603403FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="LONG_UNSIGNED" name="T1" defaultValue="30" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="T2" defaultValue="60" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="LTE Cat M1/NB-IoT config" category="LTE communication profile" classVersion="0" classId="1" logicalName="0;1;94;31;13;255">
+        <description>LTE Cat M1/NB-IoT config</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="00015E1F0DFF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="LONG_UNSIGNED" editable="true" name="Timer X1" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" editable="true" name="Timer X2" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" editable="true" name="Timer Y" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" editable="true" name="Timer Z" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="BOOL" editable="true" name="Power Saving Mode enable" defaultValue="false" edition="BOOLEAN"/>
+                <dlmsType type="ARRAY" name="technology">
+                    <dlmsType type="STRUCTURE" name="technology_parameters">
+                        <dlmsType type="ENUMERATE" editable="true" name="mode" edition="NUMBER">
+                            <parameter code="0" description="LTE Cat.M1 active"/>
+                            <parameter code="1" description="LTE Cat.NB1 active"/>
+                        </dlmsType>
+                        <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="band" defaultValue="0" edition="NUMBER"/>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

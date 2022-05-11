@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Security setup - Local Diagnostics" category="Abstract objects - Association and Security" classVersion="1" classId="64" logicalName="0;0;43;0;3;255">
+        <description>Security setup - Local Diagnostics</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name" defaultValue="00002B0003FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="security_policy" id="2">
+            <description>security_policy</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_policy" edition="NUMBER">
+                <parameter code="0" description="unused, shall be set to 0"/>
+                <parameter code="1" description="unused, shall be set to 0"/>
+                <parameter code="2" description="authenticated request"/>
+                <parameter code="3" description="encrypted request"/>
+                <parameter code="4" description="digitally signed request"/>
+                <parameter code="5" description="authenticated response"/>
+                <parameter code="6" description="encrypted response"/>
+                <parameter code="7" description="digitally signed response"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="security_suite" id="3">
+            <description>security_suite</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_suite" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="client_system_title" id="4">
+            <description>client_system_title</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="client_system_title" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="server_system_title" id="5">
+            <description>server_system_title</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="server_system_title" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="certificates" id="6">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="certeficates">
+                <dlmsType type="STRUCTURE" name="certificate_info">
+                    <dlmsType type="ENUMERATE" editable="true" name="certificate_entity" edition="NUMBER">
+                        <parameter code="0" description="server"/>
+                        <parameter code="1" description="client"/>
+                        <parameter code="2" description="certification authority"/>
+                        <parameter code="3" description="other"/>
+                    </dlmsType>
+                    <dlmsType type="ENUMERATE" editable="true" name="certificate_type" edition="NUMBER">
+                        <parameter code="0" description="digital signature"/>
+                        <parameter code="1" description="key agreement"/>
+                        <parameter code="2" description="TLS"/>
+                        <parameter code="3" description="other"/>
+                    </dlmsType>
+                    <dlmsType type="OCTET_STRING" editable="false" name="serial_number" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="issuer" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="subject" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="subject_alt_name" defaultValue="" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="security_activate" id="1">
+            <description>security_activate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_activate" edition="NUMBER">
+                <parameter code="0" description="unused, shall be set to 0"/>
+                <parameter code="1" description="unused, shall be set to 0"/>
+                <parameter code="2" description="authenticated request"/>
+                <parameter code="3" description="encrypted request"/>
+                <parameter code="4" description="digitally signed request"/>
+                <parameter code="5" description="authenticated response"/>
+                <parameter code="6" description="encrypted response"/>
+                <parameter code="7" description="digitally signed response"/>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="key_transfer" id="2">
+            <description>key_transfer</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ARRAY" name="key_transfer">
+                <dlmsType type="STRUCTURE" name="global_key_transfer">
+                    <dlmsType type="ENUMERATE" editable="true" name="key_id" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="key_wrapped" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="key_agreement" id="3">
+            <description>key_agreement</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ARRAY" name="key_agreement">
+                <dlmsType type="STRUCTURE" name="key_agreement_data">
+                    <dlmsType type="ENUMERATE" editable="true" name="key_id" edition="NUMBER">
+                        <parameter code="0" description="global_unicast_encryption_key"/>
+                        <parameter code="1" description="global_broadcast_encryption_key"/>
+                        <parameter code="2" description="authentication_key"/>
+                        <parameter code="3" description="master_key"/>
+                    </dlmsType>
+                    <dlmsType type="OCTET_STRING" editable="false" name="key_data" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="generate_key_pair" id="4">
+            <description>generate_key_pair</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="generate_key_pair" edition="NUMBER">
+                <parameter code="0" description="digital_signature_key_pair"/>
+                <parameter code="1" description="key_agreement_key_pair"/>
+                <parameter code="2" description="TLS_pair"/>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="generate_certificate_request" id="5">
+            <description>generate_certificate_request</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="generate_certificate_request" edition="NUMBER"/>
+        </dlmsMethod>
+        <dlmsMethod name="import_certificate" id="6">
+            <description>import_certificate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="import_certificate" edition="STRING"/>
+        </dlmsMethod>
+        <dlmsMethod name="export_certificate" id="7">
+            <description>export_certificate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="certificate_identification">
+                <dlmsType type="ENUMERATE" editable="true" name="certificate_identification_type" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+                <dlmsType type="ENUMERATE" name="CHOICE" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="remove_certificate" id="8">
+            <description>Methode</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="certificate_identification">
+                <dlmsType type="ENUMERATE" editable="true" name="certificate_identification_type" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+                <dlmsType type="ENUMERATE" name="CHOICE" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+    </cosemObject>
+    <cosemObject name="Security setup - Readout" category="Abstract objects - Association and Security" classVersion="1" classId="64" logicalName="0;0;43;0;2;255">
+        <description>Security setup - Readout</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name" defaultValue="00002B0002FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="security_policy" id="2">
+            <description>security_policy</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_policy" edition="NUMBER">
+                <parameter code="0" description="unused, shall be set to 0"/>
+                <parameter code="1" description="unused, shall be set to 0"/>
+                <parameter code="2" description="authenticated request"/>
+                <parameter code="3" description="encrypted request"/>
+                <parameter code="4" description="digitally signed request"/>
+                <parameter code="5" description="authenticated response"/>
+                <parameter code="6" description="encrypted response"/>
+                <parameter code="7" description="digitally signed response"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="security_suite" id="3">
+            <description>security_suite</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_suite" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="client_system_title" id="4">
+            <description>client_system_title</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="client_system_title" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="server_system_title" id="5">
+            <description>server_system_title</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="server_system_title" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="certificates" id="6">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="certeficates">
+                <dlmsType type="STRUCTURE" name="certificate_info">
+                    <dlmsType type="ENUMERATE" editable="true" name="certificate_entity" edition="NUMBER">
+                        <parameter code="0" description="server"/>
+                        <parameter code="1" description="client"/>
+                        <parameter code="2" description="certification authority"/>
+                        <parameter code="3" description="other"/>
+                    </dlmsType>
+                    <dlmsType type="ENUMERATE" editable="true" name="certificate_type" edition="NUMBER">
+                        <parameter code="0" description="digital signature"/>
+                        <parameter code="1" description="key agreement"/>
+                        <parameter code="2" description="TLS"/>
+                        <parameter code="3" description="other"/>
+                    </dlmsType>
+                    <dlmsType type="OCTET_STRING" editable="false" name="serial_number" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="issuer" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="subject" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="subject_alt_name" defaultValue="" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="security_activate" id="1">
+            <description>security_activate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_activate" edition="NUMBER">
+                <parameter code="0" description="unused, shall be set to 0"/>
+                <parameter code="1" description="unused, shall be set to 0"/>
+                <parameter code="2" description="authenticated request"/>
+                <parameter code="3" description="encrypted request"/>
+                <parameter code="4" description="digitally signed request"/>
+                <parameter code="5" description="authenticated response"/>
+                <parameter code="6" description="encrypted response"/>
+                <parameter code="7" description="digitally signed response"/>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="key_transfer" id="2">
+            <description>key_transfer</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ARRAY" name="key_transfer">
+                <dlmsType type="STRUCTURE" name="global_key_transfer">
+                    <dlmsType type="ENUMERATE" editable="true" name="key_id" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="key_wrapped" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="key_agreement" id="3">
+            <description>key_agreement</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ARRAY" name="key_agreement">
+                <dlmsType type="STRUCTURE" name="key_agreement_data">
+                    <dlmsType type="ENUMERATE" editable="true" name="key_id" edition="NUMBER">
+                        <parameter code="0" description="global_unicast_encryption_key"/>
+                        <parameter code="1" description="global_broadcast_encryption_key"/>
+                        <parameter code="2" description="authentication_key"/>
+                        <parameter code="3" description="master_key"/>
+                    </dlmsType>
+                    <dlmsType type="OCTET_STRING" editable="false" name="key_data" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="generate_key_pair" id="4">
+            <description>generate_key_pair</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="generate_key_pair" edition="NUMBER">
+                <parameter code="0" description="digital_signature_key_pair"/>
+                <parameter code="1" description="key_agreement_key_pair"/>
+                <parameter code="2" description="TLS_pair"/>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="generate_certificate_request" id="5">
+            <description>generate_certificate_request</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="generate_certificate_request" edition="NUMBER"/>
+        </dlmsMethod>
+        <dlmsMethod name="import_certificate" id="6">
+            <description>import_certificate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="import_certificate" edition="STRING"/>
+        </dlmsMethod>
+        <dlmsMethod name="export_certificate" id="7">
+            <description>export_certificate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="certificate_identification">
+                <dlmsType type="ENUMERATE" editable="true" name="certificate_identification_type" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+                <dlmsType type="ENUMERATE" name="CHOICE" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="remove_certificate" id="8">
+            <description>Methode</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="certificate_identification">
+                <dlmsType type="ENUMERATE" editable="true" name="certificate_identification_type" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+                <dlmsType type="ENUMERATE" name="CHOICE" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+    </cosemObject>
+    <cosemObject name="Security setup" category="Abstract objects - Association and Security" classVersion="1" classId="64" logicalName="0;0;43;0;0;255">
+        <description>Security setup - Management</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name" defaultValue="00002B0000FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="security_policy" id="2">
+            <description>security_policy</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_policy" edition="NUMBER">
+                <parameter code="0" description="unused, shall be set to 0"/>
+                <parameter code="1" description="unused, shall be set to 0"/>
+                <parameter code="2" description="authenticated request"/>
+                <parameter code="3" description="encrypted request"/>
+                <parameter code="4" description="digitally signed request"/>
+                <parameter code="5" description="authenticated response"/>
+                <parameter code="6" description="encrypted response"/>
+                <parameter code="7" description="digitally signed response"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="security_suite" id="3">
+            <description>security_suite</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_suite" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="client_system_title" id="4">
+            <description>client_system_title</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="client_system_title" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="server_system_title" id="5">
+            <description>server_system_title</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="server_system_title" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="certificates" id="6">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="certeficates">
+                <dlmsType type="STRUCTURE" name="certificate_info">
+                    <dlmsType type="ENUMERATE" editable="true" name="certificate_entity" edition="NUMBER">
+                        <parameter code="0" description="server"/>
+                        <parameter code="1" description="client"/>
+                        <parameter code="2" description="certification authority"/>
+                        <parameter code="3" description="other"/>
+                    </dlmsType>
+                    <dlmsType type="ENUMERATE" editable="true" name="certificate_type" edition="NUMBER">
+                        <parameter code="0" description="digital signature"/>
+                        <parameter code="1" description="key agreement"/>
+                        <parameter code="2" description="TLS"/>
+                        <parameter code="3" description="other"/>
+                    </dlmsType>
+                    <dlmsType type="OCTET_STRING" editable="false" name="serial_number" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="issuer" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="subject" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="subject_alt_name" defaultValue="" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="security_activate" id="1">
+            <description>security_activate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="security_activate" edition="NUMBER">
+                <parameter code="0" description="unused, shall be set to 0"/>
+                <parameter code="1" description="unused, shall be set to 0"/>
+                <parameter code="2" description="authenticated request"/>
+                <parameter code="3" description="encrypted request"/>
+                <parameter code="4" description="digitally signed request"/>
+                <parameter code="5" description="authenticated response"/>
+                <parameter code="6" description="encrypted response"/>
+                <parameter code="7" description="digitally signed response"/>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="key_transfer" id="2">
+            <description>key_transfer</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ARRAY" name="key_transfer">
+                <dlmsType type="STRUCTURE" name="global_key_transfer">
+                    <dlmsType type="ENUMERATE" editable="true" name="key_id" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="key_wrapped" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="key_agreement" id="3">
+            <description>key_agreement</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ARRAY" name="key_agreement">
+                <dlmsType type="STRUCTURE" name="key_agreement_data">
+                    <dlmsType type="ENUMERATE" editable="true" name="key_id" edition="NUMBER">
+                        <parameter code="0" description="global_unicast_encryption_key"/>
+                        <parameter code="1" description="global_broadcast_encryption_key"/>
+                        <parameter code="2" description="authentication_key"/>
+                        <parameter code="3" description="master_key"/>
+                    </dlmsType>
+                    <dlmsType type="OCTET_STRING" editable="false" name="key_data" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="generate_key_pair" id="4">
+            <description>generate_key_pair</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="generate_key_pair" edition="NUMBER">
+                <parameter code="0" description="digital_signature_key_pair"/>
+                <parameter code="1" description="key_agreement_key_pair"/>
+                <parameter code="2" description="TLS_pair"/>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="generate_certificate_request" id="5">
+            <description>generate_certificate_request</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="generate_certificate_request" edition="NUMBER"/>
+        </dlmsMethod>
+        <dlmsMethod name="import_certificate" id="6">
+            <description>import_certificate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="import_certificate" edition="STRING"/>
+        </dlmsMethod>
+        <dlmsMethod name="export_certificate" id="7">
+            <description>export_certificate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="certificate_identification">
+                <dlmsType type="ENUMERATE" editable="true" name="certificate_identification_type" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+                <dlmsType type="ENUMERATE" name="CHOICE" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="remove_certificate" id="8">
+            <description>Methode</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="3" name="KeyMngt" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="certificate_identification">
+                <dlmsType type="ENUMERATE" editable="true" name="certificate_identification_type" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+                <dlmsType type="ENUMERATE" name="CHOICE" edition="NUMBER">
+                    <parameter code="0" description="certificate_identification_entity"/>
+                    <parameter code="1" description="certificate_identification_serial"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+    </cosemObject>
+</datamodel>

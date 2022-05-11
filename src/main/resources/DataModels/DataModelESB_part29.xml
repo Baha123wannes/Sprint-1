@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Max Voltage L3" category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;72;26;0;255">
+        <description>Max Voltage L3</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100481A00FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="scaler_unit" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="INTEGER" editable="true" name="scaler" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="unit" defaultValue="35" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="reset" id="1">
+            <description>reset</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="reset" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+    <cosemObject name="Max Reactive Export power L2" category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;44;26;0;255">
+        <description>Max Reactive Export power L2</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="01002C1A00FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="scaler_unit" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="INTEGER" editable="true" name="scaler" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="unit" defaultValue="29" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="reset" id="1">
+            <description>reset</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="reset" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+    <cosemObject name="Push Buffer Filtre PQ" category="Abstract objects - Push Filter Inteval" classVersion="0" classId="16384" logicalName="0;0;96;78;0;255">
+        <description>Push Buffer Filtre PQ</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0000604C00FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="8" name="Read-Only" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="buffer_push_filter">
+                <dlmsType type="STRUCTURE" name="target_buffer_id">
+                    <dlmsType type="LONG_UNSIGNED" name="class_id" defaultValue="7" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" name="logical_name" defaultValue="1;0;99;3;0;255" edition="OBIS"/>
+                    <dlmsType type="INTEGER" name="attribute_index" defaultValue="1" edition="NUMBER"/>
+                    <dlmsType type="LONG_UNSIGNED" name="data_index" defaultValue="0" edition="NUMBER"/>
+                </dlmsType>
+                <dlmsType type="ARRAY" name="filter_objects_list">
+                    <dlmsType type="STRUCTURE" name="capture_object_definition">
+                        <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                        <dlmsType type="OCTET_STRING" name="logical_name" edition="OBIS"/>
+                        <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                        <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

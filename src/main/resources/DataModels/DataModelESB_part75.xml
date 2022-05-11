@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Relay activity calendar" category="Abstract objects - Time related issues" classVersion="0" classId="20" logicalName="0;11;13;0;0;255">
+        <description>Relay activity calendar</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="000B0D0000FF" edition="HEX_STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="calendar_name_active" id="2">
+            <description>calendar_name_active</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="calendar_name_active" defaultValue="090444454D4F" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="season_profile_active" id="3">
+            <description>season_profile_active</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="season_profile_active">
+                <dlmsType type="STRUCTURE" name="season">
+                    <dlmsType type="OCTET_STRING" editable="true" name="season_profile_name" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="true" name="season_start" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="true" name="week_name" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="week_profile_table_active" id="4">
+            <description>week_profile_table_active</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="week_profile_table_active">
+                <dlmsType type="STRUCTURE" name="week_profile">
+                    <dlmsType type="OCTET_STRING" editable="true" name="week_profile_name" edition="STRING"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="monday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="tuesday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="wednesday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="thursday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="friday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="saturday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="sunday" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="day_profile_table_active" id="5">
+            <description>day_profile_table_active</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="day_profile_table_active">
+                <dlmsType type="STRUCTURE" name="week_profile">
+                    <dlmsType type="UNSIGNED" editable="true" name="day_id" edition="NUMBER"/>
+                    <dlmsType type="ARRAY" name="day_schedule">
+                        <dlmsType type="STRUCTURE" name="day_profile_action">
+                            <dlmsType type="OCTET_STRING" name="start_time" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="script_logical_name" edition="STRING"/>
+                            <dlmsType type="LONG_UNSIGNED" name="script_selector" edition="NUMBER"/>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="calendar_name_passive" id="6">
+            <description>calendar_name_passive</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="calendar_name_passive" defaultValue="090444454D4F" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="season_profile_passive" id="7">
+            <description>season_profile_passive</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="season_profile_passive">
+                <dlmsType type="STRUCTURE" name="season">
+                    <dlmsType type="OCTET_STRING" editable="true" name="season_profile_name" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="true" name="season_start" edition="ADVANCED_DATETIME"/>
+                    <dlmsType type="OCTET_STRING" editable="true" name="week_name" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="week_profile_table_passive" id="8">
+            <description>week_profile_table_passive</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="week_profile_table_passive">
+                <dlmsType type="STRUCTURE" name="week_profile">
+                    <dlmsType type="OCTET_STRING" editable="true" name="week_profile_name" edition="STRING"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="monday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="tuesday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="wednesday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="thursday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="friday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="saturday" edition="NUMBER"/>
+                    <dlmsType type="UNSIGNED" editable="true" name="sunday" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="day_profile_table_passive" id="9">
+            <description>day_profile_table_passive</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="day_profile_table_passive">
+                <dlmsType type="STRUCTURE" name="day_profile">
+                    <dlmsType type="UNSIGNED" editable="true" name="day_id" edition="NUMBER"/>
+                    <dlmsType type="ARRAY" name="day_schedule">
+                        <dlmsType type="STRUCTURE" name="day_profile_action">
+                            <dlmsType type="OCTET_STRING" name="start_time" edition="HEX_STRING"/>
+                            <dlmsType type="OCTET_STRING" name="script_logical_name" defaultValue="0;0;10;0;100;255" edition="OBIS"/>
+                            <dlmsType type="LONG_UNSIGNED" name="script_selector" edition="NUMBER"/>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="activate_passive_calendar_time" id="10">
+            <description>activate_passive_calendar_time</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="6" name="Local Diagnostics" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="activate_passive_calendar_time" defaultValue="FFFFFFFFFFFFFFFFFFFFFFFF" edition="ADVANCED_DATETIME"/>
+        </dlmsAttribute>
+        <dlmsMethod name="activate_passive_calendar" id="1">
+            <description>activate_passive_calendar</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="activate_passive_calendar" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+</datamodel>

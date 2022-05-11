@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="TCP-UDP Switch" category="Abstract objects - TCP/IP profile setup" classVersion="0" classId="1" logicalName="0;1;94;31;21;255">
+        <description>TCP-UDP Switch</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="00015E1F15FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="true" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" name="protocol">
+                <parameter code="0" description="TCP" bitmask="0x00000000"/>
+                <parameter code="1" description="UDP" bitmask="0x00000010"/>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="TCP-UDP Setup" category="Abstract objects - TCP/IP profile setup" classVersion="0" classId="41" logicalName="0;0;25;0;0;255">
+        <description>TCP-UDP Setup</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name  " defaultValue="0;0;25;0;0;255;" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="TCP-UDP_port" id="2">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="LONG_UNSIGNED" editable="false" name="" defaultValue="" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="IP_reference" id="3">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name  " defaultValue="0;0;25;0;0;255;" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="MSS" id="4">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="LONG_UNSIGNED" editable="false" name="" defaultValue="" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="nb_of_sim_conn" id="5">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="UNSIGNED" editable="false" name="" defaultValue="" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="inactivity_time_out" id="6">
+            <description>description</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="LONG_UNSIGNED" editable="false" name="" defaultValue="" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Active firmware identifier 2" category="Active firmware identifier" classVersion="0" classId="1" logicalName="1;2;0;2;0;255">
+        <description>Active firmware identifier 2</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100201800FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="value" edition="STRING"/>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

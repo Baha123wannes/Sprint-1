@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Average voltage L3" category="Electricity related objects - PQ, monitored values" classVersion="0" classId="3" logicalName="1;0;72;24;0;255">
+        <description>Average voltage L3</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100481800FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="scaler_unit" id="3">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="value">
+                <dlmsType type="INTEGER" editable="true" name="scaler" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="ENUMERATE" editable="true" name="unit" defaultValue="29" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Event Object - Standard Event Log" category="Abstract objects - Errors Alarms Event logs" classVersion="0" classId="1" logicalName="0;0;96;11;0;255">
+        <description>Event Object-Standard Event Log</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0000600B00FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="value" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Push setup - Consumer Information" category="Abstract objects - User Interface" classVersion="0" classId="40" logicalName="0;6;25;9;0;255">
+        <description>Push setup - Consumer Information</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" name="logical_name" defaultValue="0006190900FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="push_object_list" id="2">
+            <description>push_object_list</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="push_object_list">
+                <dlmsType type="STRUCTURE" name="capture_object_definition">
+                    <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" name="logical_name" edition="STRING"/>
+                    <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                    <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="send_destination_and_method" id="3">
+            <description>send_destination_and_method</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="send_destination_and_method">
+                <dlmsType type="ENUMERATE" name="transport_service"/>
+                <dlmsType type="ENUMERATE" name="message"/>
+                <dlmsType type="OCTET_STRING" editable="false" name="destination" defaultValue="00;02;24;06;00;255;255;00"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="communication_window" id="4">
+            <description>communication_window</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="communication_window">
+                <dlmsType type="STRUCTURE" name="window_element">
+                    <dlmsType type="OCTET_STRING" editable="true" name="start_time" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="true" name="end_time" defaultValue="" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="randomisation_start_interval" id="5">
+            <description>randomisation_start_interval</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="LONG_UNSIGNED" name="randomisation_start_interval" defaultValue="0" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="number_of_retries" id="6">
+            <description>number_of_retries</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="UNSIGNED" editable="true" name="number_of_retries" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="repetition_delay" id="7">
+            <description>repetition_delay</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>false</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="LONG_UNSIGNED" name="repetition_delay" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsMethod name="push" id="1">
+            <description>push</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="16" name="Public" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="102" name="Pre-established" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="push" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+</datamodel>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Active firmware identifier 1" category="Active firmware identifier" classVersion="0" classId="1" logicalName="1;1;0;2;0;255">
+        <description>Active firmware identifier 1</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100201800FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="value" edition="STRING"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Supervision monitor 1 - Fuse supervision L1" category="Supervision monitor 1 - Fuse supervision L1" classVersion="0" classId="21" logicalName="1;0;31;4;0;255">
+        <description>Supervision monitor 1 - Fuse supervision L1</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="000060030AFF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="thresholds" id="2">
+            <description>thresholds</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="thresholds">
+                <dlmsType type="DOUBLE_LONG_UNSIGNED" name="thresholds" defaultValue="0" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="monitored_value" id="3">
+            <description>monitored_value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="monitored_value">
+                <dlmsType type="LONG_UNSIGNED" name="class_id" defaultValue="1" edition="NUMBER"/>
+                <dlmsType type="OCTET_STRING" name="logical_name" defaultValue="0;0;10;0;106;255" edition="STRING"/>
+                <dlmsType type="INTEGER" name="attribute_index" defaultValue="1" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="actions" id="4">
+            <description>actions</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="actions">
+                <dlmsType type="STRUCTURE" name="action_set">
+                    <dlmsType type="STRUCTURE" name="action_up">
+                        <dlmsType type="OCTET_STRING" editable="true" name="script_logical_name" edition="STRING"/>
+                        <dlmsType type="LONG_UNSIGNED" editable="true" name="script_selector" edition="NUMBER"/>
+                    </dlmsType>
+                    <dlmsType type="STRUCTURE" name="action_down">
+                        <dlmsType type="OCTET_STRING" editable="true" name="script_logical_name" edition="STRING"/>
+                        <dlmsType type="LONG_UNSIGNED" editable="true" name="script_selector" edition="NUMBER"/>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Supervision monitor 1 - Fuse supervision L2" category="Supervision monitor 1 - Fuse supervision L2" classVersion="0" classId="21" logicalName="1;0;51;4;0;255">
+        <description>Supervision monitor 1 - Fuse supervision L2</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="000060030AFF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="thresholds" id="2">
+            <description>thresholds</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="thresholds">
+                <dlmsType type="DOUBLE_LONG_UNSIGNED" name="thresholds" defaultValue="0" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="monitored_value" id="3">
+            <description>monitored_value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="monitored_value">
+                <dlmsType type="LONG_UNSIGNED" name="class_id" defaultValue="1" edition="NUMBER"/>
+                <dlmsType type="OCTET_STRING" name="logical_name" defaultValue="0;0;10;0;106;255" edition="STRING"/>
+                <dlmsType type="INTEGER" name="attribute_index" defaultValue="1" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="actions" id="4">
+            <description>actions</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="actions">
+                <dlmsType type="STRUCTURE" name="action_set">
+                    <dlmsType type="STRUCTURE" name="action_up">
+                        <dlmsType type="OCTET_STRING" editable="true" name="script_logical_name" edition="STRING"/>
+                        <dlmsType type="LONG_UNSIGNED" editable="true" name="script_selector" edition="NUMBER"/>
+                    </dlmsType>
+                    <dlmsType type="STRUCTURE" name="action_down">
+                        <dlmsType type="OCTET_STRING" editable="true" name="script_logical_name" edition="STRING"/>
+                        <dlmsType type="LONG_UNSIGNED" editable="true" name="script_selector" edition="NUMBER"/>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

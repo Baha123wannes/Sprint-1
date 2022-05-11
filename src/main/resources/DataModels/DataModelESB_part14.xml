@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Load profile with period 1" category="Electricity related objects - Profiles" classVersion="0" classId="7" logicalName="1;0;99;1;0;255">
+        <description>Load profile with period 1</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0100630100FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="buffer" id="2">
+            <description>buffer</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="buffer">
+                <dlmsType type="STRUCTURE" name="entry">
+                    <dlmsType type="OCTET_STRING" name="time" edition="STRING"/>
+                    <dlmsType type="UNSIGNED" name="status" edition="NUMBER"/>
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="value" edition="NUMBER"/>
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="value" edition="NUMBER"/>
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="value" edition="NUMBER"/>
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" name="value" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="capture_objects" id="3">
+            <description>capture_objects</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="capture_objects">
+                <dlmsType type="STRUCTURE" name="capture_object_definition">
+                    <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" name="logical_name" edition="OBIS"/>
+                    <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                    <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="capture_period" id="4">
+            <description>capture_period</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="capture_period" defaultValue="1800" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="sort_method" id="5">
+            <description>sort_method</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="sort_method" edition="NUMBER">
+                <parameter code="1" description="fifo" bitmask="0x00000000"/>
+                <parameter code="2" description="lifo" bitmask="0x00000001"/>
+                <parameter code="3" description="largest" bitmask="0x00000010"/>
+                <parameter code="4" description="smallest" bitmask="0x00000100"/>
+                <parameter code="5" description="nearest_to_zero" bitmask="0x00001000"/>
+                <parameter code="6" description="farest_from_zero" bitmask="0x00010000"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="sort_object" id="6">
+            <description>sort_object</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="sort_object">
+                <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                <dlmsType type="OCTET_STRING" name="logical_name" edition="STRING"/>
+                <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="entries_in_use" id="7">
+            <description>entries_in_use</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="entries_in_use" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="profile_entries" id="8">
+            <description>profile_entries</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="2" name="ReadOut" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="profile_entries" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsMethod name="reset" id="1">
+            <description>reset</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="true" name="reset" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+    <cosemObject name="Security - Data Protection" category="Abstract objects - Association and Security" classVersion="0" classId="30" logicalName="0;0;43;2;0;255">
+        <description>Security - Data Protection</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name" defaultValue="00002B0200FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="protection_buffer" id="2">
+            <description>protection_buffer</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="protection_object_list" id="3">
+            <description>protection_object_list</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="protection_object_list">
+                <dlmsType type="STRUCTURE" name="object_definition">
+                    <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" name="logical_name" edition="STRING"/>
+                    <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                    <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+                    <dlmsType type="STRUCTURE" name="restriction_element">
+                        <dlmsType type="ENUMERATE" editable="true" name="restriction_type" edition="NUMBER">
+                            <parameter code="0" description="none"/>
+                            <parameter code="1" description="restriction by date"/>
+                            <parameter code="2" description="restriction by entry"/>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="protection_parameters_get" id="4">
+            <description>protection_parameters_get</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="protection_parameters_get">
+                <dlmsType type="STRUCTURE" name="protection_parameters_element">
+                    <dlmsType type="ENUMERATE" editable="true" name="protection_type" edition="NUMBER">
+                        <parameter code="0" description="authentication"/>
+                        <parameter code="1" description="encryption"/>
+                        <parameter code="2" description="authentication and encryption"/>
+                        <parameter code="3" description="digital signature"/>
+                    </dlmsType>
+                    <dlmsType type="STRUCTURE" name="protection_options">
+                        <dlmsType type="OCTET_STRING" name="transaction_id" defaultValue="0" edition="STRING"/>
+                        <dlmsType type="OCTET_STRING" name="originator_system_title" edition="STRING"/>
+                        <dlmsType type="OCTET_STRING" name="recipient_system_title" edition="STRING"/>
+                        <dlmsType type="OCTET_STRING" name="other_information" defaultValue="0" edition="STRING"/>
+                        <dlmsType type="STRUCTURE" name="key_info_element">
+                            <dlmsType type="ENUMERATE" editable="true" name="key_info_type" edition="NUMBER">
+                                <parameter code="0" description="identified_key"/>
+                                <parameter code="1" description="wrapped_key"/>
+                                <parameter code="2" description="agreed_key"/>
+                            </dlmsType>
+                            <dlmsType type="OCTET_STRING" name="key_info_options" defaultValue="" edition="STRING"/>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="protection_parameters_set" id="5">
+            <description>protection_parameters_set</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="protection_parameters_set">
+                <dlmsType type="STRUCTURE" name="protection_parameters_element">
+                    <dlmsType type="ENUMERATE" editable="true" name="protection_type" edition="NUMBER">
+                        <parameter code="0" description="authentication"/>
+                        <parameter code="1" description="encryption"/>
+                        <parameter code="2" description="authentication and encryption"/>
+                        <parameter code="3" description="digital signature"/>
+                    </dlmsType>
+                    <dlmsType type="STRUCTURE" name="protection_options">
+                        <dlmsType type="OCTET_STRING" name="transaction_id" defaultValue="0" edition="STRING"/>
+                        <dlmsType type="OCTET_STRING" name="originator_system_title" edition="STRING"/>
+                        <dlmsType type="OCTET_STRING" name="recipient_system_title" edition="STRING"/>
+                        <dlmsType type="OCTET_STRING" name="other_information" defaultValue="0" edition="STRING"/>
+                        <dlmsType type="STRUCTURE" name="key_info_element">
+                            <dlmsType type="ENUMERATE" editable="true" name="key_info_type" edition="NUMBER">
+                                <parameter code="0" description="identified_key"/>
+                                <parameter code="1" description="wrapped_key"/>
+                                <parameter code="2" description="agreed_key"/>
+                            </dlmsType>
+                            <dlmsType type="OCTET_STRING" name="key_info_options" defaultValue="" edition="STRING"/>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="required_protection" id="6">
+            <description>required_protection</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="true" name="required_protection" edition="NUMBER">
+                <parameter code="0" description="unused, shall be set to 0"/>
+                <parameter code="1" description="unused, shall be set to 0"/>
+                <parameter code="2" description="authenticated request"/>
+                <parameter code="3" description="encrypted request"/>
+                <parameter code="4" description="digitally signed request"/>
+                <parameter code="5" description="authenticated response"/>
+                <parameter code="6" description="encrypted response"/>
+                <parameter code="7" description="digitally signed response"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="get_protected_attributes" id="1">
+            <description>get_protected_attributes</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="get_protected_attributes_request" edition="A_XDR">
+                <dlmsType type="ARRAY" name="object_list">
+                    <dlmsType type="STRUCTURE" name="object_definition">
+                        <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                        <dlmsType type="OCTET_STRING" name="logical_name" edition="STRING"/>
+                        <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                        <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+                        <dlmsType type="STRUCTURE" name="restriction_element">
+                            <dlmsType type="ENUMERATE" editable="true" name="restriction_type" edition="NUMBER">
+                                <parameter code="0" description="none"/>
+                                <parameter code="1" description="restriction by date"/>
+                                <parameter code="2" description="restriction by entry"/>
+                            </dlmsType>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+                <dlmsType type="ARRAY" name="protection_parameters">
+                    <dlmsType type="STRUCTURE" name="protection_parameters_element">
+                        <dlmsType type="ENUMERATE" editable="true" name="protection_type" edition="NUMBER">
+                            <parameter code="0" description="authentication"/>
+                            <parameter code="1" description="encryption"/>
+                            <parameter code="2" description="authentication and encryption"/>
+                            <parameter code="3" description="digital signature"/>
+                        </dlmsType>
+                        <dlmsType type="STRUCTURE" name="protection_options">
+                            <dlmsType type="OCTET_STRING" name="transaction_id" defaultValue="0" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="originator_system_title" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="recipient_system_title" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="other_information" defaultValue="0" edition="STRING"/>
+                            <dlmsType type="STRUCTURE" name="key_info_element">
+                                <dlmsType type="ENUMERATE" editable="true" name="key_info_type" edition="NUMBER">
+                                    <parameter code="0" description="identified_key"/>
+                                    <parameter code="1" description="wrapped_key"/>
+                                    <parameter code="2" description="agreed_key"/>
+                                </dlmsType>
+                                <dlmsType type="OCTET_STRING" name="key_info_options" defaultValue="" edition="STRING"/>
+                            </dlmsType>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="set_protected_attributes" id="2">
+            <description>set_protected_attributes</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="set_protected_attributes_request" edition="A_XDR">
+                <dlmsType type="ARRAY" name="object_list">
+                    <dlmsType type="STRUCTURE" name="object_definition">
+                        <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                        <dlmsType type="OCTET_STRING" name="logical_name" edition="STRING"/>
+                        <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                        <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+                        <dlmsType type="STRUCTURE" name="restriction_element">
+                            <dlmsType type="ENUMERATE" editable="true" name="restriction_type" edition="NUMBER">
+                                <parameter code="0" description="none"/>
+                                <parameter code="1" description="restriction by date"/>
+                                <parameter code="2" description="restriction by entry"/>
+                            </dlmsType>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+                <dlmsType type="ARRAY" name="protection_parameters">
+                    <dlmsType type="STRUCTURE" name="protection_parameters_element">
+                        <dlmsType type="ENUMERATE" editable="true" name="protection_type" edition="NUMBER">
+                            <parameter code="0" description="authentication"/>
+                            <parameter code="1" description="encryption"/>
+                            <parameter code="2" description="authentication and encryption"/>
+                            <parameter code="3" description="digital signature"/>
+                        </dlmsType>
+                        <dlmsType type="STRUCTURE" name="protection_options">
+                            <dlmsType type="OCTET_STRING" name="transaction_id" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="originator_system_title" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="recipient_system_title" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="other_information" edition="STRING"/>
+                            <dlmsType type="STRUCTURE" name="key_info_element">
+                                <dlmsType type="ENUMERATE" editable="true" name="key_info_type" edition="NUMBER">
+                                    <parameter code="0" description="identified_key"/>
+                                    <parameter code="1" description="wrapped_key"/>
+                                    <parameter code="2" description="agreed_key"/>
+                                </dlmsType>
+                                <dlmsType type="OCTET_STRING" name="key_info_options" edition="STRING"/>
+                            </dlmsType>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+                <dlmsType type="OCTET_STRING" name="protected_attributes" edition="STRING"/>
+            </dlmsType>
+        </dlmsMethod>
+        <dlmsMethod name="invoke_protected_method" id="3">
+            <description>invoke_protected_method</description>
+            <methodAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="invoke_protected_method_request" edition="A_XDR">
+                <dlmsType type="STRUCTURE" name="object_method">
+                    <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" name="logical_name" edition="STRING"/>
+                    <dlmsType type="INTEGER" name="method_index" edition="NUMBER"/>
+                </dlmsType>
+                <dlmsType type="ARRAY" name="protection_parameters">
+                    <dlmsType type="STRUCTURE" name="protection_parameters_element">
+                        <dlmsType type="ENUMERATE" editable="true" name="protection_type" edition="NUMBER">
+                            <parameter code="0" description="authentication"/>
+                            <parameter code="1" description="encryption"/>
+                            <parameter code="2" description="authentication and encryption"/>
+                            <parameter code="3" description="digital signature"/>
+                        </dlmsType>
+                        <dlmsType type="STRUCTURE" name="protection_options">
+                            <dlmsType type="OCTET_STRING" name="transaction_id" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="originator_system_title" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="recipient_system_title" edition="STRING"/>
+                            <dlmsType type="OCTET_STRING" name="other_information" edition="STRING"/>
+                            <dlmsType type="STRUCTURE" name="key_info_element">
+                                <dlmsType type="ENUMERATE" editable="true" name="key_info_type" edition="NUMBER">
+                                    <parameter code="0" description="identified_key"/>
+                                    <parameter code="1" description="wrapped_key"/>
+                                    <parameter code="2" description="agreed_key"/>
+                                </dlmsType>
+                                <dlmsType type="OCTET_STRING" name="key_info_options" edition="STRING"/>
+                            </dlmsType>
+                        </dlmsType>
+                    </dlmsType>
+                </dlmsType>
+                <dlmsType type="OCTET_STRING" name="protected_method_invocation_parameters" edition="STRING"/>
+            </dlmsType>
+        </dlmsMethod>
+    </cosemObject>
+    <cosemObject name="Image transfer" category="Abstract objects - Firmware Upgrade" classVersion="0" classId="18" logicalName="0;0;44;0;0;255">
+        <description>Image transfer</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name  " defaultValue="00002C0000FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="image_block_size" id="2">
+            <description>image_block_size</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="image_block_size" defaultValue="96" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="image_transferred_block_status" id="3">
+            <description>image_transferred_block_status</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="BIT_STRING" editable="false" name="image_transferred_block_status" defaultValue="0"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="image_first not_transferred_block_number" id="4">
+            <description>image_first not_transferred_block_number</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="not_transferred_block_number" defaultValue="0" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="image_transfer_enabled" id="5">
+            <description>image_transfer_enabled</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="BOOL" editable="true" name="image_transfer_enabled" defaultValue="1" edition="BOOLEAN"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="image_transfer status" id="6">
+            <description>image_transfer status</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ENUMERATE" editable="false" name="image_transfer status" edition="NUMBER">
+                <parameter code="0" description="IMAGE_TRANSFER_NOT_INITIATED"/>
+                <parameter code="1" description="IMAGE_TRANSFER_INITIATED"/>
+                <parameter code="2" description="IMAGE_VERIFICATION_INITIATED"/>
+                <parameter code="3" description="IMAGE_VERIFICATION_SUCCESSFUL"/>
+                <parameter code="4" description="IMAGE_VERIFICATION_FAILED"/>
+                <parameter code="5" description="IMAGE_ACTIVATION_INITIATED"/>
+                <parameter code="6" description="IMAGE_ACTIVATION_SUCCESSFUL"/>
+                <parameter code="7" description="IMAGE_ACTIVATION_FAILED"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="image_to_activate_info" id="7">
+            <description>image_to_activate_info</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="image_to_activate_info">
+                <dlmsType type="STRUCTURE" name="image_info">
+                    <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="false" name="image_size" min="0" max="4294967295" defaultValue=""/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="image_identification" defaultValue="" edition="STRING"/>
+                    <dlmsType type="OCTET_STRING" editable="false" name="image_signature" defaultValue="" edition="STRING"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsMethod name="image_transfer_initiate" id="1">
+            <description>image_transfer_initiate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="image_transfer_initiate"/>
+        </dlmsMethod>
+        <dlmsMethod name="image_block_transfer" id="2">
+            <description>image_block_transfer</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="STRUCTURE" name="image_block_transfer"/>
+        </dlmsMethod>
+        <dlmsMethod name="image_verify" id="3">
+            <description>image_verify</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>true</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="false" name="image_verify" defaultValue="0" edition="NUMBER"/>
+        </dlmsMethod>
+        <dlmsMethod name="image_activate" id="4">
+            <description>image_activate</description>
+            <methodAssociations allowMultipleReferences="false">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+                <association id="4" name="Firmware download" multiCast="false" broadCast="false" uniCast="true">
+                    <actionRight>
+                        <action>false</action>
+                    </actionRight>
+                </association>
+            </methodAssociations>
+            <dlmsType type="INTEGER" editable="false" name="image_activate" defaultValue="0" edition="NUMBER"/>
+        </dlmsMethod>
+    </cosemObject>
+</datamodel>

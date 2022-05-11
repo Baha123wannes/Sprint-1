@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Limiter" category="Abstract objects - Disconnector, Load mgmt, Supervision" classVersion="0" classId="71" logicalName="0;0;17;0;0;255">
+        <description>Limiter</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0000110000FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="monitored_value" id="2">
+            <description>monitored_value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="monitored_value">
+                <dlmsType type="LONG_UNSIGNED" editable="true" name="class_id" defaultValue="3" edition="NUMBER"/>
+                <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="1-0:9.14.0.255" edition="STRING"/>
+                <dlmsType type="INTEGER" editable="true" name="attribute_index" defaultValue="2" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="threshold_active" id="3">
+            <description>threshold_active</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="threshold_active" defaultValue="27600" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="threshold_normal" id="4">
+            <description>threshold_normal</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="threshold_normal" defaultValue="27600" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="treshold_emergency" id="5">
+            <description>treshold_emergency</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="treshold_emergency" defaultValue="27600" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="min_over_threshold_duration" id="6">
+            <description>min_over_threshold_duration</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="min_over_threshold_duration" defaultValue="1" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="min_under_threshold_duration" id="7">
+            <description>min_under_threshold_duration</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="min_under_threshold_duration" defaultValue="1" edition="NUMBER"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="emergency_profile" id="8">
+            <description>emergency_profile</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="emergency_profile">
+                <dlmsType type="LONG_UNSIGNED" editable="true" name="class_id" defaultValue="0" edition="NUMBER"/>
+                <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="FFFFFFFFFFFFFFFFFFFFFFFF" edition="STRING"/>
+                <dlmsType type="DOUBLE_LONG_UNSIGNED" editable="true" name="attribute_index" defaultValue="0" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="emergency_profile_group_id_list" id="9">
+            <description>emergency_profile_group_id_list</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="emergency_profile_group_id_list">
+                <dlmsType type="LONG_UNSIGNED" name="emergency_profile_group_id" defaultValue="0" edition="NUMBER"/>
+            </dlmsType>
+        </dlmsAttribute>
+        <dlmsAttribute name="emergency_profile_active" id="10">
+            <description>emergency_profile_active</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="BOOL" editable="true" name="emergency_profile_active" edition="BOOLEAN"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="actions" id="11">
+            <description>actions</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="actions">
+                <dlmsType type="STRUCTURE" name="action_over_threshold">
+                    <dlmsType type="OCTET_STRING" name="script_logical_name" defaultValue="0;0;10;0;106;255" edition="STRING"/>
+                    <dlmsType type="LONG_UNSIGNED" name="script_selector" defaultValue="1" edition="NUMBER"/>
+                </dlmsType>
+                <dlmsType type="STRUCTURE" name="action_under_threshold">
+                    <dlmsType type="OCTET_STRING" name="script_logical_name" defaultValue="255;255;255;255;255;255" edition="STRING"/>
+                    <dlmsType type="LONG_UNSIGNED" name="script_selector" defaultValue="0" edition="NUMBER"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Start time of last partial power failure-L3" category="Abstract objects - Errors  Alarms, Event logs" classVersion="0" classId="1" logicalName="0;0;96;7;16;255">
+        <description>Start time of last partial power failure-L3</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="000060070EFF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" edition="STRING"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Start time of last partial power failure-L2" category="Abstract objects - Errors  Alarms, Event logs" classVersion="0" classId="1" logicalName="0;0;96;7;15;255">
+        <description>Start time of last partial power failure - L2</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="000060070EFF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" edition="STRING"/>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

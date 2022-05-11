@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Active firmware identifier 2" category="Active firmware identifier" classVersion="0" classId="1" logicalName="1;5;0;2;0;255">
+        <description>Active firmware identifier 2</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0105000200FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="value" edition="STRING"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Push action scheduler - On Connectivity" category="Electricity related objects - Totals" classVersion="0" classId="22" logicalName="0;0;15;0;4;255">
+        <description>Push action scheduler</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="00030F0004FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="execution_time" id="4">
+            <description>execution_time</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="execution_time">
+                <dlmsType type="STRUCTURE" name="entry">
+                    <dlmsType type="OCTET_STRING" editable="true" name="time" defaultValue="00000000" edition="ADVANCED_TIME"/>
+                    <dlmsType type="OCTET_STRING" editable="true" name="date" defaultValue="FFFFFFFFFF" edition="ADVANCED_DATE"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Push action scheduler - Interval_1" category="Electricity related objects - Totals" classVersion="0" classId="22" logicalName="0;1;15;0;4;255">
+        <description>Push action scheduler</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="00010F0004FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="execution_time" id="4">
+            <description>execution_time</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="ARRAY" name="execution_time">
+                <dlmsType type="STRUCTURE" name="entry">
+                    <dlmsType type="OCTET_STRING" editable="true" name="time" defaultValue="00000000" edition="ADVANCED_TIME"/>
+                    <dlmsType type="OCTET_STRING" editable="true" name="date" defaultValue="FFFFFFFFFF" edition="ADVANCED_DATE"/>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel name="DataModelESB" creationDate="2021-12-16T16:00:00.000+01:00" version="10" xmlns="http://www.sagemcom.com/dataModel/v1">
+    <cosemObject name="Push Buffer Filtre BILLING" category="Abstract objects - Push Filter Inteval" classVersion="0" classId="16384" logicalName="0;0;96;77;0;255">
+        <description>Push Buffer Filtre BILLING</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="true" name="logical_name" defaultValue="0000604C00FF" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="8" name="Read-Only" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="STRUCTURE" name="buffer_push_filter">
+                <dlmsType type="STRUCTURE" name="target_buffer_id">
+                    <dlmsType type="LONG_UNSIGNED" name="class_id" defaultValue="7" edition="NUMBER"/>
+                    <dlmsType type="OCTET_STRING" name="logical_name" defaultValue="1;0;99;3;0;255" edition="OBIS"/>
+                    <dlmsType type="INTEGER" name="attribute_index" defaultValue="1" edition="NUMBER"/>
+                    <dlmsType type="LONG_UNSIGNED" name="data_index" defaultValue="0" edition="NUMBER"/>
+                </dlmsType>
+                <dlmsType type="ARRAY" name="filter_objects_list">
+                    <dlmsType type="STRUCTURE" name="capture_object_definition">
+                        <dlmsType type="LONG_UNSIGNED" name="class_id" edition="NUMBER"/>
+                        <dlmsType type="OCTET_STRING" name="logical_name" edition="OBIS"/>
+                        <dlmsType type="INTEGER" name="attribute_index" edition="NUMBER"/>
+                        <dlmsType type="LONG_UNSIGNED" name="data_index" edition="NUMBER"/>
+                    </dlmsType>
+                </dlmsType>
+            </dlmsType>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Profile status - Load profile with period 1" category="Electricity related objects - Profiles" classVersion="0" classId="1" logicalName="0;0;96;10;1;255">
+        <description>Profile status - Load profile with period 1</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="UNSIGNED" editable="true" name="status" defaultValue="" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+    <cosemObject name="Profile status - Load profile with period 2" category="Electricity related objects - Profiles" classVersion="0" classId="1" logicalName="0;0;96;10;2;255">
+        <description>Profile status - Load profile with period 2</description>
+        <dlmsAttribute name="logical_name" id="1">
+            <description>logical_name</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>false</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="OCTET_STRING" editable="false" name="logical_name" edition="STRING"/>
+        </dlmsAttribute>
+        <dlmsAttribute name="value" id="2">
+            <description>value</description>
+            <attributeAssociations allowMultipleReferences="true">
+                <association id="1" name="Management" multiCast="false" broadCast="false" uniCast="true">
+                    <accessRights>
+                        <set>true</set>
+                        <get>true</get>
+                    </accessRights>
+                </association>
+            </attributeAssociations>
+            <dlmsType type="UNSIGNED" editable="true" name="status" defaultValue="" edition="NUMBER"/>
+        </dlmsAttribute>
+    </cosemObject>
+</datamodel>
