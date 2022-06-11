@@ -65,6 +65,11 @@ public class AttributServiceImpl implements AttributService {
 	public void save(List<DlmsAttribut> attribut) {
 		attriRepo.saveAll(attribut);
 	}
+	@Override
+	public DlmsAttribut SearchByName(String name) {
+		// TODO Auto-generated method stub
+		return attriRepo.findByName(name);
+	}
 	
 	
 	

@@ -29,7 +29,7 @@ public class Association_attribute {
 	
 	@Column(name="name")
 	private String name;
-	@Column(name="multi_cast")
+	@Column(name="multiCast")
 	private boolean multiCast;
 	
 	@Column(name="broadcast")

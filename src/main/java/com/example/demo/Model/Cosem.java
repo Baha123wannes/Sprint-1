@@ -12,9 +12,11 @@ import javax.persistence.Table;
 import org.hibernate.annotations.*;
 
 import com.example.demo.Service.AdapterMethode;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRawValue;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -43,18 +45,18 @@ public class Cosem implements Serializable {
 	@Column(name="description")
 	private String description;
 
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn 
-	private DataModel Data;
+	
     
 	@OneToMany(cascade = CascadeType.ALL)
 	@Embedded
 	@JoinColumn(name="cosemObject")
+	@JsonManagedReference
 	private List<DlmsAttribut> dlmsAttribute;
     
 	@OneToMany(cascade = CascadeType.ALL)
 	@Embedded
 	@JoinColumn(name="Cosem_id")
+	@JsonManagedReference
 	@JsonAdapter(AdapterMethode.class)
 	private List<DlmsMethode> dlmsMethod;
 
@@ -73,7 +75,6 @@ public class Cosem implements Serializable {
 		this.category = category;
 		this.classVersion = classVersion;
 		this.description = description;
-		Data = data;
 		this.dlmsAttribute = dlmsAttribute;
 		this.dlmsMethod = dlmsMethod;
 	}
@@ -132,14 +133,6 @@ public class Cosem implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public DataModel getData() {
-		return Data;
-	}
-
-	public void setData(DataModel data) {
-		Data = data;
 	}
 
 	public List<DlmsAttribut> getDlmsAttribute() {

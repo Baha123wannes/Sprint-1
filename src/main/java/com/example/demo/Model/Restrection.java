@@ -12,6 +12,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name="metering_restriction")
 public class Restrection {
@@ -24,10 +27,13 @@ public class Restrection {
 	private RestrectionType restrictionType;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
+	@JsonBackReference
 	private DeviceType device_type_id;
 	@ManyToOne(cascade=CascadeType.ALL)
+	@JsonBackReference
 	private DeviceVendor device_vendor_id;
 	@ManyToMany(cascade=CascadeType.ALL)
+	@JsonBackReference
 	private List<DataModel> dataModels;
 	public Restrection() {
 		super();

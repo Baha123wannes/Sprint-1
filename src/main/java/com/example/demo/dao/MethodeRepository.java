@@ -8,4 +8,6 @@ import com.example.demo.Model.DlmsMethode;
 @Repository
 public interface MethodeRepository extends JpaRepository<DlmsMethode,Integer>{
 
+	DlmsMethode findByName(String name);
+
 }

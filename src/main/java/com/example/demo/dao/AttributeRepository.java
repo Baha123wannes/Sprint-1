@@ -10,5 +10,7 @@ import com.example.demo.Model.DlmsAttribut;
 @Repository
 public interface AttributeRepository extends JpaRepository<DlmsAttribut,Integer> {
 
+	DlmsAttribut findByName(String name);
+
 
 }

@@ -21,6 +21,7 @@ public interface AttributService {
 	/*public List<DlmsAttribut> CreerDlmsAttribute() throws ParserConfigurationException, SAXException, IOException;
 	public List<DlmsAttribut> CreerAttributeComplet() throws ParserConfigurationException, SAXException, IOException;*/
 	public void save(List<DlmsAttribut> attribut);
+	public DlmsAttribut SearchByName(String name);
 
 
 

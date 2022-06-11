@@ -11,11 +11,15 @@ import org.springframework.stereotype.Repository;
 import org.w3c.dom.Element;
 
 @Repository
-public interface DataModelRepository extends JpaRepository<DataModel,String> {
+public interface DataModelRepository extends JpaRepository<DataModel,Integer> {
 		public List<DataModel> findAll();
 		public Optional<DataModel> findById(int id);
-		public DataModel findByVersion(@Param("version")String version);
+		public List<DataModel> findByVersion(@Param("version")int version);
 		public DataModel findByDateCreation(@Param("dateCreation")LocalDate dateCreation);
 		/*public DataModel save(DataModel d);
 	*/
+		public DataModel findByName(@Param("name")String name);
+		public DataModel findByUserName(String d);
+		public Optional<DataModel> deleteByName(String dataModel);
+		
 }

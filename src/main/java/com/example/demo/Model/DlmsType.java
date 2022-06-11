@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
@@ -35,10 +37,12 @@ public class DlmsType {
 	
 	@ManyToOne(cascade= CascadeType.ALL)
 	@JoinColumn(name="Attribute_type")
+	@JsonBackReference
 	private DlmsAttribut dlmsAttribute;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="Methode_type")
+	@JsonBackReference
 	private DlmsMethode dlmsMethod;
 	
 	

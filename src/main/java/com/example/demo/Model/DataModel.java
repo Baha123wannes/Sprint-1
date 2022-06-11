@@ -7,9 +7,13 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import org.hibernate.engine.profile.Fetch;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -31,20 +35,21 @@ public class DataModel implements Serializable {
 	@Column(name="upload_date")
 	private Date update_date;
 	@Column(name="user_name")
-	private String user_name;
+	private String userName;
 	@Column(name="device_type")
 	private String device_type;
 	@Column(name="hardware_version")
 	private String hardware_version;
 	@Column(name="software_version")
 	private String software_version;
-	@Embedded
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="data_id")
+	
+	@OneToMany(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+	@JoinColumn(name="data_id") 
 	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
 	private List<Cosem> cosemObject;
 	@Embedded
 	@ManyToMany(cascade = CascadeType.ALL)
+	@JsonManagedReference
 	private List<Restrection> restrection;
 	public DataModel(String name, int version,Date date) {
 		super();
@@ -102,11 +107,11 @@ public class DataModel implements Serializable {
 	public void setUpdate_date(Date update_date) {
 		this.update_date = update_date;
 	}
-	public String getUser_name() {
-		return user_name;
+	public String getuserName() {
+		return userName;
 	}
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setuserName(String user_name) {
+		this.userName = user_name;
 	}
 	public String getDevice_type() {
 		return device_type;

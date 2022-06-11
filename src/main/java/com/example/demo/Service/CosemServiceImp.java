@@ -4,7 +4,7 @@ package com.example.demo.Service;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Optional;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -73,10 +73,10 @@ public class CosemServiceImp implements CosemService {
 	}
 	
 	
-/*	public Cosem FindCosem(Cosem cos)
+	public Optional<Cosem> findCosem(Cosem cos)
 	{
-		return CosemRepo.getById(cos.getId());
-	}*/
+		return CosemRepo.findById(cos.getId());
+	}
 	public Cosem UpdateCosem(Cosem cos)
 	{
 		return CosemRepo.save(cos);
@@ -99,7 +99,21 @@ public class CosemServiceImp implements CosemService {
 		CosemRepo.saveAll(CosemList);
 	}
 
-	
+	public List<Cosem> findBycategory(String cat)
+	{
+		return CosemRepo.findByCategory(cat);
+	}
 
+	@Override
+	public Cosem findByCategory(String category) {
+		// TODO Auto-generated method stub
+		return CosemRepo.findBycategory(category);
+	}
+
+	public Cosem findByName(String name)
+	{
+		return CosemRepo.findByName(name);
+	}
+	
 
 }

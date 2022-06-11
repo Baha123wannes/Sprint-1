@@ -18,6 +18,7 @@ public interface MethodeService {
 	public DlmsMethode deleteMethode(DlmsMethode meth);
 	public DlmsMethode deleteMethodeById(int i);
 	public DlmsMethode UpdateMethode(DlmsMethode meth);
+	public DlmsMethode SearchByName(String name);
 	public void save(List<DlmsMethode> meth);
 	
 

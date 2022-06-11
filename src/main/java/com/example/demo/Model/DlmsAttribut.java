@@ -21,8 +21,10 @@ import org.springframework.boot.jackson.JsonComponent;
 
 import com.example.demo.Service.AdapterType;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRawValue;
 import com.fasterxml.jackson.annotation.JsonRootName;
@@ -49,10 +51,12 @@ public class DlmsAttribut {
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="Attribute_type")
 	@JsonAdapter(AdapterType.class)
+	@JsonManagedReference
 	private List<DlmsType> dlmsType;
 	
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="association")
+	@JsonBackReference
 	private AssociationAttri attributeAssociations;
 	
 	

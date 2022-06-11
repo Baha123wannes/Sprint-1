@@ -8,6 +8,7 @@ import javax.persistence.*;
 import com.example.demo.Service.AdapterAssociation;
 import com.example.demo.Service.AdapterMethode;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.google.gson.annotations.JsonAdapter;
 
 @Entity
@@ -24,6 +25,7 @@ public class AssociationAttri  {
 	
 	@OneToMany(cascade= CascadeType.ALL)
 	@JsonAdapter(AdapterAssociation.class)
+	@JsonManagedReference
 	private List<Association_attribute> association;
 
 	public AssociationAttri() {

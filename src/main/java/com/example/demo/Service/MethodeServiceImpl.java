@@ -58,6 +58,9 @@ public class MethodeServiceImpl implements MethodeService {
 		methRepo.save(meth);
 		return methRepo.getById(meth.getId());
 	}
-	
+	public DlmsMethode SearchByName(String name)
+	{
+		return methRepo.findByName(name);
+	}
 	
 }

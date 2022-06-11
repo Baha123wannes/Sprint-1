@@ -8,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="metering_device_vendor")
 public class DeviceVendor {
@@ -19,6 +22,7 @@ public class DeviceVendor {
 	@Column(name="value")
 	private String Value;
 	@OneToOne
+	@JsonBackReference
 	private Restrection restrictionVendor;
 	public DeviceVendor() {
 		super();

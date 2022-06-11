@@ -8,7 +8,9 @@ import javax.persistence.*;
 import org.springframework.data.annotation.Reference;
 
 import com.example.demo.Service.AdapterType;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.google.gson.annotations.JsonAdapter;
@@ -33,10 +35,12 @@ public class DlmsMethode {
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name = "Methode_type")
 	@JsonAdapter(AdapterType.class)
+	@JsonManagedReference
 	private List<DlmsType> dlmsType;
 	
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="methodAssociations")
+	@JsonBackReference
 	private AssociationMeth methodAssociations;
 	public DlmsMethode() {
 		super();

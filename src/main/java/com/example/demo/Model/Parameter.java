@@ -10,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
@@ -30,6 +31,7 @@ public class Parameter {
 	private String bitmask;
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="dlmsType_id")
+	@JsonBackReference
 	private DlmsType dlmsType_id;
 	public Parameter() {
 		super();

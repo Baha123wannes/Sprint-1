@@ -18,6 +18,7 @@ import com.example.demo.Service.AdapterAssociation;
 import com.example.demo.Service.AdapterAssociationMeth;
 import com.example.demo.Service.AdapterMethode;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.google.gson.annotations.JsonAdapter;
 @Entity
@@ -34,6 +35,7 @@ public class AssociationMeth {
 	private boolean allowMultipleReferences;
 	@OneToMany(cascade=CascadeType.ALL)
 	@JsonAdapter(AdapterAssociationMeth.class)
+	@JsonManagedReference
 	private List<Association_Methode> association;
 
 	public AssociationMeth() {
